@@ -13,7 +13,7 @@ LOCAL_CONFIG = "config-local.ini"
 
 def file_config():
     cfg = SafeConfigParser()
-    cfg.readfp(pkg_resources.resource_stream(__name__, "config.ini"))
+    cfg.readfp(pkg_resources.resource_stream(__name__, "/app/config.ini"))
     if os.path.isfile(LOCAL_CONFIG):
         cfg.readfp(pkg_resources.resource_stream(__name__, LOCAL_CONFIG))
     return cfg
