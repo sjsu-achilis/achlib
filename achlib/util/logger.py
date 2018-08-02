@@ -6,7 +6,7 @@ from logging import *
 from datetime import date
 import inspect
 
-from synthetic.config import file_config
+from achlib.config import file_config
 
 app_config = file_config()
 
