@@ -9,6 +9,9 @@ from achlib.config import file_config</br>
 config = file_config()</br>
 config.get('SECTION','key')</br>
 
+#### to override configs
+keep a file in your host /app/config-local.ini</br>
+
 #### for logging:
 from achlib.util import logger</br>
 log = logger.getLogger(__name__)</br>
