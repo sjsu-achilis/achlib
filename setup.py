@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 #dependency_links = ['git+https://github.com/trusty/python-xmp-toolkit.git#egg=dutaxmptoolkit']
 dependencies = [
-    psycopg2==2.7.5
+    "psycopg2==2.7.5"
 ]
 
 setup(
