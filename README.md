@@ -2,7 +2,7 @@
 ### contains basic config, logger, db connection
 
 #### to install
-`pip install git+https://github.com/sjsu-achilis/achlib.git#egg=achlib</br>`
+`pip install git+https://github.com/sjsu-achilis/achlib.git#egg=achlib`</br>
 
 #### to get config
 from achlib.config import file_config</br>
