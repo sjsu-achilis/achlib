@@ -49,11 +49,13 @@ def get_log_config(label):
         return {
             "version": 1,
             "formatters": {
-                "flask": {"format": "%(asctime)s - %(threadName)s - %(request_id)s - %(name)s - %(filename)s - %(levelname)s - %(message)s"}
+                "flask": {
+                    "format": "%(asctime)s - %(threadName)s - %(request_id)s - %(name)s - %(filename)s - %(levelname)s - %(message)s"
+                }
             },
             "filters": {
                 "flask": {
-                    "()": "synthetic.util.logfilter.FlaskLogFilter",
+                    "()": "achlib.util.logfilter.FlaskLogFilter",
                     "flask": "ext://flask"
                 }
             },
