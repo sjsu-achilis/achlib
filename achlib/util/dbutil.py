@@ -40,6 +40,7 @@ def db_fetch(query, fetch='all'):
             res = cur.fetchmany(fetch)
     except:
         log.error('could not fetch result')
+        raise
     finally:
         log.info('connection terminated')
         conn.close()
