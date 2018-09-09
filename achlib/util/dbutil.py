@@ -58,10 +58,11 @@ def db_insup(query):
         log.info('querry executed and commited')
     except:
         log.error('could not execute query')
-        return False
+        raise
     finally:
         log.info('connection terminated')
         conn.close()
+        return False
 
     return True
 
