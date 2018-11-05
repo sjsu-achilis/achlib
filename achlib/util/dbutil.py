@@ -62,7 +62,6 @@ def db_insup(query):
     finally:
         log.info('connection terminated')
         conn.close()
-        return False
 
     return True
 
