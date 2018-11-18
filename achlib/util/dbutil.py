@@ -65,6 +65,23 @@ def db_insup(query):
 
     return True
 
+@timit
+def generate_device_key():
+    conn = db_connect()
+    cur = conn.cursor()
+    try:
+        cur.execute("SELECT nextval('device_key_seq')")
+        res = cur.fetchall()
+        log.info('device key generated')
+    except:
+        log.error('could not fetch result')
+        raise
+    finally:
+        log.info('connection terminated')
+        conn.close()
+
+    return res[0][0]
+
 '''
 def close_pool():
     try:
