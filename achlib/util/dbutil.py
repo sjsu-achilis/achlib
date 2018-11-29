@@ -82,6 +82,24 @@ def generate_device_key():
 
     return res[0][0]
 
+
+@timit
+def generate_session_id():
+    conn = db_connect()
+    cur = conn.cursor()
+    try:
+        cur.execute("SELECT nextval('session_id_seq')")
+        res = cur.fetchall()
+        log.info('session id generated')
+    except:
+        log.error('could not fetch result')
+        raise
+    finally:
+        log.info('connection terminated')
+        conn.close()
+
+    return res[0][0]
+
 '''
 def close_pool():
     try:
